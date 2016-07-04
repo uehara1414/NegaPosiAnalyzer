@@ -1,0 +1,2 @@
+# SentimentAnalyzer
+日本語文章の感情分析ライブラリになる予定
