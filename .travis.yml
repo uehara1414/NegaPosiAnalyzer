@@ -1,4 +1,3 @@
-sudo: required
 env:
   - OS_TYPE=centos OS_VERSION=7
 language: python
