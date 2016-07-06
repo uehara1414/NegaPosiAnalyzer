@@ -16,7 +16,8 @@ def _get_noun_dict_path() -> str:
 
 
 def _get_neolgd_pass() -> str:
-    return subprocess.getoutput('echo `mecab-config --dicdir`"/mecab-ipadic-neologd"')
+    cmd = 'echo `mecab-config --dicdir`"/mecab-ipadic-neologd"'
+    return subprocess.getoutput(cmd)
 
 
 def _load_declinable_word_dict() -> dict:
@@ -59,7 +60,8 @@ def _load_negaposi_data() -> dict:
     return negaposi_dict
 
 
-def _count_negaposi_sum(word_list: list, negative: bool=True, positive: bool=True) -> int:
+def _count_negaposi_sum(word_list: list, negative: bool=True,
+                        positive: bool=True) -> int:
     negaposi_dict = _load_negaposi_data()
     score = 0
     val_list = []
@@ -87,7 +89,7 @@ def _get_word_list(sentence: str) -> list:
     return word_list
 
 
-def evaluate_sentence(sentence: str, negative: bool=True, positive: bool=True) -> int:
+def evaluate_sentence(sentence: str, negative: bool=True,
+                      positive: bool=True) -> int:
     word_list = _get_word_list(sentence)
     return _count_negaposi_sum(word_list, negative=negative, positive=positive)
-
