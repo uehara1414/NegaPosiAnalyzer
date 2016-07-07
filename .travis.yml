@@ -1,13 +1,11 @@
-env:
-  - OS_TYPE=centos OS_VERSION=7
 language: python
 python:
   - "3.3"
   - "3.4"
   - "3.5"
 before_install:
-  - sudo rpm -ivh http://packages.groonga.org/centos/groonga-release-1.1.0-1.noarch.rpm
-  - sudo yum install mecab mecab-ipadic -y
+  - apt-get install mecab libmecab-dev mecab-ipadic
+  - aptitude install mecab-ipadic-utf8
 # command to install dependencies
 install:
   - pip install -r requirements.txt
