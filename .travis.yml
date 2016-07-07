@@ -1,15 +1,9 @@
 language: python
 python:
-  - "3.3"
-  - "3.4"
   - "3.5"
 before_install:
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  - sudo apt-get update -q
-  - sudo apt-get install gcc-4.8 -y
   - sudo apt-get install mecab libmecab-dev mecab-ipadic
   - sudo aptitude install mecab-ipadic-utf8
-  - echo `mecab -v`
 # command to install dependencies
 install:
   - pip install -r requirements.txt
