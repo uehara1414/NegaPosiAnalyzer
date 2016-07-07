@@ -1,0 +1,11 @@
+wago.121808.pn
+日本語評価極性辞書（用言編）ver.1.0（2008年12月版）/ Japanese Sentiment Dictionary (Volume of Verbs and Adjectives) ver. 1.0
+著作者: 東北大学 乾・岡崎研究室 / Author(s): Inui-Okazaki Laboratory, Tohoku University
+本辞書を利用される場合は参考文献 1 (小林, 2005) を引用ください．
+クレジットを明記していただければ，商用利用も可能です．
+
+pn.csv.m3.120408.trim
+日本語評価極性辞書（名詞編）ver.1.0（2008年12月版）/ Japanese Sentiment Dictionary (Volume of Nouns) ver. 1.0 †
+著作者: 東北大学 乾・岡崎研究室 / Author(s): Inui-Okazaki Laboratory, Tohoku University
+本辞書を利用される場合は参考文献 2 (東山, 2008) を引用ください．
+クレジットを明記していただければ，商用利用も可能です．
