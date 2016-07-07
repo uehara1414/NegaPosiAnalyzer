@@ -4,6 +4,7 @@ python:
   - "3.4"
   - "3.5"
 before_install:
+  - sudo apt-get install gcc-4.8 -y
   - sudo apt-get install mecab libmecab-dev mecab-ipadic
   - sudo aptitude install mecab-ipadic-utf8
   - echo `mecab -v`
