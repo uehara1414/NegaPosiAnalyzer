@@ -4,8 +4,8 @@ python:
   - "3.4"
   - "3.5"
 before_install:
-  - apt-get install mecab libmecab-dev mecab-ipadic
-  - aptitude install mecab-ipadic-utf8
+  - sudo apt-get install mecab libmecab-dev mecab-ipadic
+  - sudo aptitude install mecab-ipadic-utf8
 # command to install dependencies
 install:
   - pip install -r requirements.txt
