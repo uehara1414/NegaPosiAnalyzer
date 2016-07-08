@@ -17,7 +17,12 @@ def _get_noun_dict_path() -> str:
 
 def _get_neolgd_pass() -> str:
     cmd = 'echo `mecab-config --dicdir`"/mecab-ipadic-neologd"'
-    return subprocess.getoutput(cmd)
+    dist = subprocess.getoutput(cmd)
+    ls_ret = subprocess.getoutput('ls %s' % dist)
+    if "No such" in ls_ret:
+        raise FileNotFoundError("mecab-ipadic-neologd not found.")
+    else:
+        return dist
 
 
 def _load_declinable_word_dict() -> dict:
@@ -77,9 +82,12 @@ def _count_negaposi_sum(word_list: list, negative: bool=True,
 
 
 def _get_word_list(sentence: str) -> list:
-    neolgd_pass = _get_neolgd_pass()
-
-    m = MeCab.Tagger("-Ochasen -d %s" % neolgd_pass)
+    m = None
+    try:
+        neolgd_pass = _get_neolgd_pass()
+        m = MeCab.Tagger("-Ochasen -d %s" % neolgd_pass)
+    except FileNotFoundError:
+        m = MeCab.Tagger("-Ochasen")
     m.parse('')
     node = m.parseToNode(sentence)
     word_list = []

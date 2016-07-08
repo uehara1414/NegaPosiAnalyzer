@@ -10,10 +10,6 @@ before_install:
   - wget http://ftp.sjtu.edu.cn/ubuntu/pool/universe/m/mecab/mecab-utils_0.996-1.1_amd64.deb
   - sudo dpkg -i mecab-utils_0.996-1.1_amd64.deb
   - sudo apt-get install -y mecab-ipadic-utf8
-  - sudo aptitude install mecab -y
-  - git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
-  - cd mecab-ipadic-neologd
-  - sudo ./bin/install-mecab-ipadic-neologd -n
 # command to install dependencies
 install:
   - pip install -r requirements.txt
