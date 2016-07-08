@@ -43,13 +43,12 @@ def _load_noun_dict() -> dict:
             l = l.split('\t')
 
             if l[1] == "p":
-                value = 1
+                dct[l[0]] = 1
             elif l[1] == "e":
-                value = 0
+                dct[l[0]] = 0
             elif l[1] == "n":
-                value = -1
+                dct[l[0]] = -1
 
-            dct[l[0]] = value
     return dct
 
 
