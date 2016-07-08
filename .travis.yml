@@ -3,7 +3,6 @@ python:
   - "3.5"
 before_install:
   - sudo apt-get update -qq
-  - sudo aptitude install mecab -y
   - wget http://ftp.sjtu.edu.cn/ubuntu/pool/universe/m/mecab/libmecab2_0.996-1.1_amd64.deb
   - sudo dpkg -i  libmecab2_0.996-1.1_amd64.deb
   - wget http://ftp.sjtu.edu.cn/ubuntu/pool/universe/m/mecab/libmecab-dev_0.996-1.1_amd64.deb
@@ -11,6 +10,7 @@ before_install:
   - wget http://ftp.sjtu.edu.cn/ubuntu/pool/universe/m/mecab/mecab-utils_0.996-1.1_amd64.deb
   - sudo dpkg -i mecab-utils_0.996-1.1_amd64.deb
   - sudo apt-get install -y mecab-ipadic-utf8
+  - sudo aptitude install mecab -y
   - git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
   - cd mecab-ipadic-neologd
   - sudo ./bin/install-mecab-ipadic-neologd -n
