@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.0.1'
+version = '0.0.2'
 name = 'NegaPosiAnalyzer'
 
 setup(
@@ -12,6 +12,7 @@ setup(
     install_requires=['mecab-python3'],
     url='https://github.com/uehara1414/NegaPosiAnalyzer.git',
     packages=['NegaPosiAnalyzer'],
+    package_data={'NegaPosiAnalyzer': ['dictionary/*.*']},
     classifiers=[
         "Development Status :: 4 - Beta",
         'Operating System :: OS Independent',
